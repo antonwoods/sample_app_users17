@@ -7,6 +7,12 @@ describe UsersController do
       get 'new'
       response.should be_success
     end
+    
+    it "should habe right title" do
+      get 'new'
+      response.should have_selector("title", :content=> "Signup")
+    end
+    
   end
 
 end
